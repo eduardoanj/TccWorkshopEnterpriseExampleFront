@@ -4,15 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './routes/app-router';
-import { AuthProvider } from './contexts/auth';
+import { ApiProvider } from './contexts/auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthProvider>
+  <ApiProvider>
     <BrowserRouter>
       <AppRouter />
     </BrowserRouter>
-  </AuthProvider>
+  </ApiProvider>
 );
 
 reportWebVitals();

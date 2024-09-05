@@ -1,9 +1,9 @@
-import { createContext, useEffect, useState } from "react";
-import { getAcessos, PostUsuario, getWorks, postWorks, getUserWorks, vinculateUserWorks } from "../services/acessos.service";
+import { createContext, useState } from "react";
+import { getAcessos, PostUsuario, getWorks, postWorks, getUserWorks, vinculateUserWorks } from "../services/http.service";
 
 export const AuthContext = createContext({});
 
-export const AuthProvider = ({ children }) => {
+export const ApiProvider = ({ children }) => {
     const [user, setUser] = useState();    
 
     const signin = async (email, password) => {
