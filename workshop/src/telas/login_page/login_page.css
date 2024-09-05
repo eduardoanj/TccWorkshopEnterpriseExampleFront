@@ -1,0 +1,41 @@
+.color {
+    background-color: white;
+}
+
+.sortIcon {
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -0.2em;
+    vertical-align: bottom;
+    margin-left: 8px;
+    color: #bfbfbf;
+    cursor: pointer;
+}
+
+.center {
+    width: 50%; /* Set any width you prefer */
+    height: 50%; /* And any height */
+    margin-left: 500px;
+    margin-top: 300px;
+}
+
+
+.button {
+    background-color: #335E88;
+}
+table tbody tr td:last-child {
+text-align: center;
+}
+
+.th-last-item .th-content-wrapper:last-child {
+justify-content: center;
+}
+.action-button {
+padding: 4px 3px !important;
+height: 24px !important;
+}
