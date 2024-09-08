@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo} from 'react';
-import { Avatar, List, Tooltip } from 'antd';
+import { Avatar, List, Tooltip, message } from 'antd';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -12,6 +12,7 @@ export function Listagem(){
     const [dados, setDados] = useState();
     const [arrow, setArrow] = useState('Show');
     const [usuario, setUsuario] = useState();
+    const [messageApi, contextHolder] = message.useMessage();
 
     useEffect(() => {
         async function fetchData() {
@@ -58,6 +59,11 @@ export function Listagem(){
     const vincular = async (workshopId) => {
         const user = getLoggedUser()
         await vinculate(user.userId, workshopId)
+
+        messageApi.open({
+            type: 'success',
+            content: 'Você está inscrito!!',
+          });
     }
 
     const mergedArrow = useMemo(() => {
@@ -74,6 +80,7 @@ export function Listagem(){
 
     return (
         <div>
+            {contextHolder}
             <List
                 itemLayout="vertical"
                 size="large"
