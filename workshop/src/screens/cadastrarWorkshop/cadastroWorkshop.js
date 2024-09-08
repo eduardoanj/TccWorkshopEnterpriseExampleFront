@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Form, Input, message, DatePicker } from 'antd';
+import { Button, Form, Input, message, DatePicker, TimePicker } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
@@ -83,6 +83,17 @@ export function CadastroWorkshop(){
                     ]}
                 >
                     <DatePicker renderExtraFooter={() => 'extra footer'} />
+                </Form.Item>
+                <Form.Item
+                    name={['user', 'time']}
+                    label="Horário"
+                    rules={[
+                        {
+                            required: true,
+                        },
+                    ]}
+                >
+                    <TimePicker renderExtraFooter={() => 'extra footer'} />
                 </Form.Item>
                 <Form.Item 
                     name={['user', 'description']} 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes , Route } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-import HomeListagem from '../telas/listagem/home_listagem';
-import Home from '../telas/home_page/home';
+import HomeListagem from '../screens/listagem/home_listagem';
+import Home from '../screens/home_page/home';
 import useAuth from '../hooks/useAuth';
 
 

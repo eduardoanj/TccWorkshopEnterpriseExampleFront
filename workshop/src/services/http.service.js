@@ -98,14 +98,16 @@ const getWorks = async (page, userId) => {
 const postWorks = async (values, idCreator) => {
   const config = new Config();
   const name = values['user']['name'];
-  const date = values['user']['date'];
+  const date = values['user']['date'].toISOString().slice(0, -14);
+  const time = values['user']['time'].toISOString().substring(11);
+  const datetime = `${date}T${time}`; 
   const description = values['user']['description'];
   const address = values['user']['address'];
   const image = values['user']['image'];
 
   var jsonBody = JSON.stringify({
     name: name,
-    date: date,
+    date: datetime,
     description: description,
     address: address,
     image: image,
